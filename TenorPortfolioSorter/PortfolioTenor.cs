@@ -19,7 +19,7 @@ namespace TenorPortfolioSorter
 
         public string Tenor {get; set;}
         public int PortfolioId {get; set;}
-        public int Value {get; set;}
+        public double Value {get; set;}
 
         public int TenorDayValue 
         {
