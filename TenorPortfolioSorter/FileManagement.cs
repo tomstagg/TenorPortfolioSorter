@@ -34,11 +34,13 @@ namespace TenorPortfolioSorter
             return portfolioTenors;
         }
 
-        public static void WriteFile(List<PortfolioTenor> portfolioTenors, string headerCsv, string outputFileName)
+        public static void WriteFile(List<PortfolioTenor> portfolioTenors, string outputFileName)
         {
             using (TextWriter textWriter = new StreamWriter(outputFileName, false))
             {
+                string headerCsv = "Tenor, PortfolioId, Value";
                 textWriter.WriteLineAsync(headerCsv);
+                
                 foreach (var portfolioTenor in portfolioTenors)
                 {
                     textWriter.WriteLine(portfolioTenor.OutputCsv());

@@ -45,35 +45,9 @@ namespace TenorPortfolioSorter
                         tenorDayValue += Int32.Parse(match.Value) * regexPeriod.PeriodDayValue;
                 }
                 return tenorDayValue;
-            }
-            
+            }            
         }
-        // public int TenorDayValue
-        // {
-        //     get 
-        //     {
-        //         int tenorDayValue = 0;
 
-        //         var yearMatch = Regex.Match(Tenor, @"(\d+)(?=y)");
-        //         var monthMatch = Regex.Match(Tenor, @"(\d+)(?=m)");
-        //         var weekMatch = Regex.Match(Tenor, @"(\d+)(?=w)");
-        //         var dayMatch = Regex.Match(Tenor, @"(\d+)(?=d)");
-
-        //         if (yearMatch.Success)
-        //             tenorDayValue = Int32.Parse(yearMatch.Value) * 365;
-
-        //         if (monthMatch.Success)
-        //             tenorDayValue += Int32.Parse(monthMatch.Value) * 30;
-
-        //         if (weekMatch.Success)
-        //             tenorDayValue += Int32.Parse(weekMatch.Value) * 7;
-
-        //         if (dayMatch.Success)
-        //             tenorDayValue += Int32.Parse(dayMatch.Value);
-
-        //         return tenorDayValue;   
-        //     }
-        // }
         public string OutputCsv ()
         {
             return string.Join(", ", Tenor, PortfolioId, Value);
